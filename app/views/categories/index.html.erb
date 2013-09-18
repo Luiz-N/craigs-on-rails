@@ -1,0 +1,21 @@
+<div class="container cf">
+  <div>
+    <%= link_to "log in", login_path %>
+    <%= link_to "log out", logout_path %>
+  </div>
+  <div class ="hero"><h1>JohnathonsList!</h1>
+  <p>Here are some interesting categories found in Chicago just for you!</p>
+  </div>
+  <div id="lists" class="cf">
+    <ul id="left">
+      <% @categories[0].each do |category| %>
+      <li><%= link_to category.title, category_path(category) %></li>
+      <% end %>
+    </ul>
+    <ul id ="right">
+      <% @categories[1].each do |category| %>
+      <li><%= link_to category.title, category_path(category) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

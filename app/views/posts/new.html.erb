@@ -1,0 +1,21 @@
+<div class="container cf">
+  <h1 class="hero">Add a Post</h1>
+
+<%= form_for @post, url: category_posts_path(@category) do |f| %>
+<div class="row">
+<%= f.text_field :title,  placeholder: "Title"%>
+</div>
+<div class="row">
+<%= f.text_field :description,  placeholder: "description"%>
+</div>
+<div class="row">
+<%= f.text_field :price,  placeholder: "price"%>
+</div>
+<div class="row">
+<%= f.text_field :email,  placeholder: "email"%>
+</div>
+<div class="row">
+<%= f.submit "create post"%>
+</div>
+<% end %>
+</div>
